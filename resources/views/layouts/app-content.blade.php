@@ -14,14 +14,14 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 
     @include('layouts.assets-css')
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body id="kt_body" style="background-image: url(assets/media/bg/bg-10.jpg); height:100%" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
+<body id="kt_body" style="background-image: url({{ asset('assets/media/bg/bg-10.jpg') }}); height:100%" class="quick-panel-right demo-panel-right offcanvas-right header-fixed subheader-enabled page-loading">
     <!--begin::Main-->
     @include('layouts.mobile-header')
     <div class="d-flex flex-column flex-root">
@@ -61,8 +61,9 @@
 
     
     @include('layouts.assets-js')
+    @include('layouts.scripts.swal')
     <!--begin::Page Vendors(used by this page)-->
-    <script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-    <script src="assets/js/pages/widgets.js"></script>
+    <script src="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/widgets.js') }}"></script>
 </body>
 </html>

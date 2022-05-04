@@ -7,8 +7,8 @@
             <!--begin::Header Logo-->
             <div class="header-logo">
                 <a href="index.html">
-                    <img alt="Logo" src="assets/media/logos/logo-letter-9.png" class="logo-default max-h-40px" />
-                    <img alt="Logo" src="assets/media/logos/logo-letter-1.png" class="logo-sticky max-h-40px" />
+                    <img alt="Logo" src="{{ asset('assets/media/logos/logo-letter-9.png') }}" class="logo-default max-h-40px" />
+                    <img alt="Logo" src="{{ asset('assets/media/logos/logo-letter-1.png') }}" class="logo-sticky max-h-40px" />
                 </a>
             </div>
             <!--begin::Header Menu Wrapper-->
@@ -18,23 +18,20 @@
                     class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
                     <!--begin::Header Nav-->
                     <ul class="menu-nav">
-                        <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here"
-                            data-menu-toggle="click" aria-haspopup="true">
-                            <a href="javascript:;" class="menu-link menu-toggle">
+                        <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here">
+                            <a href="{{ route('home') }}" class="menu-link ">
                                 <span class="menu-text">Dashboard</span>
                                 <i class="menu-arrow"></i>
                             </a>
                         </li>
-                        <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here"
-                            data-menu-toggle="click" aria-haspopup="true">
-                            <a href="javascript:;" class="menu-link menu-toggle">
+                        <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here">
+                            <a href="{{ route('customers.index') }}" class="menu-link ">
                                 <span class="menu-text">Customer</span>
                                 <i class="menu-arrow"></i>
                             </a>
                         </li>
-                        <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here"
-                            data-menu-toggle="click" aria-haspopup="true">
-                            <a href="javascript:;" class="menu-link menu-toggle">
+                        <li class="menu-item menu-item-open menu-item-here menu-item-submenu menu-item-rel menu-item-open menu-item-here">
+                            <a href="{{ route('orders.index') }}" class="menu-link ">
                                 <span class="menu-text">Order</span>
                                 <i class="menu-arrow"></i>
                             </a>
@@ -51,7 +48,7 @@
                 <!--begin::Toggle-->
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
-                        <img class="h-20px w-20px rounded-sm" src="assets/media/svg/flags/226-united-states.svg"
+                        <img class="h-20px w-20px rounded-sm" src="{{ asset('assets/media/svg/flags/226-united-states.svg') }}"
                             alt="" />
                     </div>
                 </div>
@@ -64,7 +61,7 @@
                         <li class="navi-item">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
-                                    <img src="assets/media/svg/flags/226-united-states.svg" alt="" />
+                                    <img src="{{ asset('assets/media/svg/flags/226-united-states.svg') }}" alt="" />
                                 </span>
                                 <span class="navi-text">English</span>
                             </a>
@@ -74,42 +71,11 @@
                         <li class="navi-item active">
                             <a href="#" class="navi-link">
                                 <span class="symbol symbol-20 mr-3">
-                                    <img src="assets/media/svg/flags/128-spain.svg" alt="" />
+                                    <img src="{{ asset('assets/media/svg/flags/128-spain.svg') }}" alt="" />
                                 </span>
                                 <span class="navi-text">Spanish</span>
                             </a>
                         </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="symbol symbol-20 mr-3">
-                                    <img src="assets/media/svg/flags/162-germany.svg" alt="" />
-                                </span>
-                                <span class="navi-text">German</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="symbol symbol-20 mr-3">
-                                    <img src="assets/media/svg/flags/063-japan.svg" alt="" />
-                                </span>
-                                <span class="navi-text">Japanese</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                                <span class="symbol symbol-20 mr-3">
-                                    <img src="assets/media/svg/flags/195-france.svg" alt="" />
-                                </span>
-                                <span class="navi-text">French</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
                     </ul>
                     <!--end::Nav-->
                 </div>
