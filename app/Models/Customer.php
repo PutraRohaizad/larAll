@@ -27,4 +27,9 @@ class Customer extends Model
     {
         $this->belongsTo(User::class);
     }
+
+    public function scopeIsActive($query)
+    {   
+        return $query->where('is_active', 1);
+    }
 }

@@ -31,23 +31,23 @@ class CustomerController extends Controller
         $data = $request->validated();
         $customer =  new Customer();
         $customer->fill($data);
-        $customer->pic = $data['pic']->getClientOriginalName();
-        $customer->save();
-
-        $data['pic']->storeAs('public/customers', $data['pic']->getClientOriginalName());
-        return redirect()->route('customers.index')->with('success', 'Customer have been created');
-    }
-
-    public function update(UpdateCustomerRequest $request, Customer $customer)
-    {
-        $data = $request->validated();
-        $customer->fill($data);
-
         if(!empty($data['pic'])){
             $customer->pic = $data['pic']->getClientOriginalName();
             $data['pic']->storeAs('public/customers', $data['pic']->getClientOriginalName());
         }
+        $customer->save();
 
+        return redirect()->route('customers.index')->with('success', 'Customer have been created');
+    }
+
+    public function update( Customer $customer, UpdateCustomerRequest $request)
+    {
+        $data = $request->validated();
+        $customer->fill($data);
+        if(!empty($data['pic'])){
+            $customer->pic = $data['pic']->getClientOriginalName();
+            $data['pic']->storeAs('public/customers', $data['pic']->getClientOriginalName());
+        }
         $customer->save();
         return redirect()->back()->with('success', 'Customer have been updated');
     }

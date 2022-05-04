@@ -40,8 +40,13 @@
                         <td class="pr-0">
                             <div class="symbol symbol-50 symbol-light mt-1">
                                 <span class="symbol-label">
+                                    @if ($customer->pic)
+                                    <img src="{{ asset("customers/$customer->pic")}}"
+                                    class="h-75 align-self-end" alt="img">
+                                    @else    
                                     <img src="{{ asset('assets/media/svg/avatars/001-boy.svg')}}"
-                                        class="h-75 align-self-end" alt="">
+                                        class="h-75 align-self-end" alt="img">
+                                    @endif
                                 </span>
                             </div>
                         </td>
