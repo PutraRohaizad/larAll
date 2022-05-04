@@ -18,9 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::group(['middleware' => 'auth'], function(){
+
+Route::group(['middleware' => ['auth', 'verified']], function(){
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('customers', \App\Http\Controllers\CustomerController::class);
     Route::resource('orders', \App\Http\Controllers\OrderController::class);

@@ -11,6 +11,8 @@
 - `MVC`
 - `Migration`
 - `Create , Read , Update , Delete`
+- `Verify email`
+
 ## Setup
 
 - `composer install`
