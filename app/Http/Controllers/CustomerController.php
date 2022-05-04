@@ -6,6 +6,7 @@ use App\Models\Customer;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\CreateCustomerRequest;
 use App\Http\Requests\UpdateCustomerRequest;
+use App\Notifications\CustomerCreated;
 
 class CustomerController extends Controller
 {
@@ -37,6 +38,7 @@ class CustomerController extends Controller
         }
         $customer->save();
 
+        $customer->notify(new CustomerCreated());
         return redirect()->route('customers.index')->with('success', 'Customer have been created');
     }
 

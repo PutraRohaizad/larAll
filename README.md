@@ -12,6 +12,9 @@
 - `Migration`
 - `Create , Read , Update , Delete`
 - `Verify email`
+- `Observer`
+- `Notification`
+- `ShouldQueue`
 
 ## Setup
 

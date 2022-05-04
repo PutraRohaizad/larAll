@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 255)->nullable();
             $table->text('description')->nullable();
             $table->string('quantity')->nullable();
-            $table->string('status', 20)->default('NEW')->nullable();
+            $table->string('status', 20)->nullable();
             $table->foreignId('customer_id')->nullable()->constrained()->cascadeOnDelete();
             $table->timestamps();
         });
